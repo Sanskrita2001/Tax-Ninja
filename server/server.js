@@ -11,6 +11,7 @@ app.use(express.json());
 
 //import routes
 const userRoutes = require('./Routes/User')
+const scenarioRoutes = require('./Routes/Scenario')
 
 const connDB = async()=>{
     try {
@@ -29,6 +30,7 @@ const connDB = async()=>{
 connDB();
 
 app.use('/api', userRoutes);
+app.use('/api/scenario', scenarioRoutes);
 
 app.use(notFound)
 app.use(errorHandler)
