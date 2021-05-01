@@ -254,9 +254,25 @@ const Savings = () => {
 					</div>
 					<div
 						className='col-12 col-md-6'
-						style={{ backgroundColor: '#4CBC8D', marginTop:'10%' }}
+						style={{
+							backgroundColor: '#4CBC8D',
+							marginTop: '10%',
+							padding: '4%',
+							borderRadius: '3%',
+						}}
 					>
-						<h3>Results</h3>
+						<h2 className='text-center'>Results</h2>
+						<h5 className='text-white p-3'>Total Exemption:</h5>
+						<h5 className='text-white p-3'>Total Deduction:</h5>
+						<h5 className='text-white p-3'>Taxable Income:</h5>
+						<h5 className='text-white p-3'>Your Savings:</h5>
+                        <h5 className='text-white p-3'>Your Taxes:</h5>
+						<Button variant='dark' size='lg' block style={{ margin: '5% 0' }}>
+							Save the Scenario
+						</Button>
+						<Button variant='dark' size='lg' block style={{ margin: '2% 0' }}>
+							Print as PDF
+						</Button>
 					</div>
 				</div>
 			</div>
