@@ -19,7 +19,7 @@ const LandingSaving=()=>{
                     <p className="l-text2" style={{ fontSize:"2.8em"}}>Watch Your Savings Grow!</p>
                     </div>
                     <div style={{margin:"3em 0"}}>
-                      <span><button style={{width:"15em", fontSize:"1.2em", height:"3em", borderRadius:"1em", border:"2px solid black", backgroundColor:"transparent",color:"white"}}>Start Investing</button></span>
+                      <span><button style={{width:"15em", fontSize:"1.2em", height:"3em", borderRadius:"1em", border:"2px solid black", backgroundColor:"transparent",color:"white"}}><a href="#" style={{textDecoration:"none",color:"white"}}>Start Saving</a></button></span>
                     </div>
                   </div>
                 </Col>
