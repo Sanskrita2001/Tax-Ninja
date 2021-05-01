@@ -10,8 +10,9 @@ app.use(cors({origin: 'http://localhost:3000'}))
 app.use(express.json());
 
 //import routes
-const userRoutes = require('./Routes/User')
-const scenarioRoutes = require('./Routes/Scenario')
+const userRoutes = require('./Routes/User');
+const scenarioRoutes = require('./Routes/Scenario');
+const detailsRoutes = require('./Routes/UserDetails');
 
 const connDB = async()=>{
     try {
@@ -31,7 +32,7 @@ connDB();
 
 app.use('/api', userRoutes);
 app.use('/api/scenario', scenarioRoutes);
-
+app.use('/api/details', detailsRoutes);
 app.use(notFound)
 app.use(errorHandler)
 
