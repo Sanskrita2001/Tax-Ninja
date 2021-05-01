@@ -13,6 +13,7 @@ app.use(express.json());
 const userRoutes = require('./Routes/User');
 const scenarioRoutes = require('./Routes/Scenario');
 const detailsRoutes = require('./Routes/UserDetails');
+const fundRoutes = require('./Routes/MutualFund');
 
 const connDB = async()=>{
     try {
@@ -33,6 +34,7 @@ connDB();
 app.use('/api', userRoutes);
 app.use('/api/scenario', scenarioRoutes);
 app.use('/api/details', detailsRoutes);
+app.use('/api/mutualfund', fundRoutes);
 app.use(notFound)
 app.use(errorHandler)
 

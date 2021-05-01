@@ -51,6 +51,11 @@ const userDetailsSchema = new mongoose.Schema({
     },
     additionalIncome: {
         type: Number
+    },
+    investment:{
+        type: String,
+        enum: ['aggressive', 'normal'],
+        required: true
     }
 })
 

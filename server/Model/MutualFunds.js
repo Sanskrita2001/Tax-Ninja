@@ -5,8 +5,11 @@ const mutualFundSchema = new mongoose.Schema({
         type: String, 
         required: true
     },
-    ISINGrowth:{
-        type: String,
+    ISINPayout:{
+        type: String
+    },
+    rate:{
+        type: Number,
         required: true
     },
     ISINReinvestment:{
@@ -17,8 +20,7 @@ const mutualFundSchema = new mongoose.Schema({
         required: true
     },
     schemeName: {
-        type: String,
-        required: true
+        type: String
     },
     Date:{
         type: Date
@@ -35,3 +37,5 @@ const mutualFundSchema = new mongoose.Schema({
         required: true
     }
 })
+
+module.exports = new mongoose.model('MutualFunds', mutualFundSchema);
