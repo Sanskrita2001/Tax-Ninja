@@ -2,19 +2,21 @@ import React from 'react';
 import LoginPage from '../src/components/Login';
 import SignupPage from '../src/components/Signup';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Helper from './UI/Helper';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-          Intro
-      </header>
-      <div className="Login">
-          <LoginPage/>
-          <SignupPage/>
-      </div>
-    </div>
-  );
+      <>
+			<BrowserRouter>
+				<Helper />
+				<Switch>
+					<Route className='Login' exact path='/' component={LoginPage} />
+					<Route className='signup' exact path='/signup' component={SignupPage} />
+				</Switch>
+      </BrowserRouter>
+      </>
+	);
 }
 
 export default App;
