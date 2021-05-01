@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-import Bunny from '../images/bunny.png';
+import Bunny from '../images/Peace Bunny.svg';
 
 const LandingAbout=()=>{
     return(
