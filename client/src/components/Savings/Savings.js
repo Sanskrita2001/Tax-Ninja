@@ -9,9 +9,35 @@ import {
 } from 'react-bootstrap';
 const Savings = () => {
 	const [show, setShow] = useState(false);
+	const [salary, setSalary] = useState(0)
+	const [rental, setRental] = useState('');
+	const [deposits, setDeposits] = useState('');
+	const [others, setOthers] = useState('');
+    const [houseRent, setHouseRent] = useState('');
+	const [travelAllowance, setTravelAllowance] = useState('');
+	const [gratuity, setGratuity] = useState('');
+	const [food, setFood] = useState('');
+	const [telephone, setTelephone] = useState('');
+	const [pe, setPe] = useState('');
+	const [tuition, setTuition] = useState('');
+	const [lifeInsuarance, setLifeInsurance] = useState('');
+	const [investmentInNationalBank, setInvestmentInNationalBank] = useState('');
+	const [fiveyearTerm, setFiveyearTerm] = useState('');
 
-	const handleClose = () => setShow(false);
+	const [totalExemption, setTotalExemption] = useState('');
+	const [totalDeduction, setTotaldeduction] = useState('');
+	const [taxableIncome, setTaxableIncome] = useState('');
+	const [totalSavings, setTotalSavings] = useState('');
+	const [taxes, setTaxes] = useState('');
+
+	const handleClose = () => {
+	setShow(false);
+    console.log(typeof(rental))
+	console.log(parseInt(rental))
+
+	}
 	const handleShow = () => setShow(true);
+	console.log(salary)
 	return (
 		<div className='savings'>
 			<div className='container'>
@@ -19,7 +45,7 @@ const Savings = () => {
 					<div className='col-12 col-md-6'>
 						<h1 style={{ marginTop: '30%', color: '#093321' }}>Start Saving</h1>
 						<Form.Group controlId='salary'>
-							<Form.Control type='text' placeholder='Gross Annual Salary' />
+							<Form.Control type='text' placeholder='Gross Annual Salary' value={salary} onChange={(e)=>setSalary(e.target.value)}/>
 							<Form.Text className='text-muted' style={{ color: '#2D8D64' }}>
 								We'll never share your details with anyone else.
 							</Form.Text>
@@ -70,7 +96,7 @@ const Savings = () => {
 									</Modal.Header>
 									<Modal.Body>
 										<Form.Group>
-											<Form.Control type='text' />
+											<Form.Control type='text' value={rental} onChange={(e)=> setRental(e.target.value)}/>
 										</Form.Group>
 									</Modal.Body>
 									<Modal.Footer>
@@ -152,7 +178,7 @@ const Savings = () => {
 									</Modal.Header>
 									<Modal.Body>
 										<Form.Group>
-											<Form.Control type='text' />
+											<Form.Control type='text' value={rental} onChange={(e)=>setRental(e.target.value)}/>
 										</Form.Group>
 									</Modal.Body>
 									<Modal.Footer>
