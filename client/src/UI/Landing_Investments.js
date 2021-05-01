@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Bunny from '../images/bunny.png';
 
 const LandingInvestment=()=>{
@@ -17,7 +18,7 @@ const LandingInvestment=()=>{
                     <p className="l-text2" style={{ fontSize:"2.8em"}}>Watch Your Savings Grow!</p>
                     </div>
                     <div style={{margin:"3em 0"}}>
-                      <span><button style={{width:"15em", fontSize:"1.2em", height:"3em", borderRadius:"1em", border:"2px solid black", backgroundColor:"transparent"}}><a href="#" style={{textDecoration:"none",color:"white"}}>Start Investing</a></button></span>
+                      <span><button style={{width:"15em", fontSize:"1.2em", height:"3em", borderRadius:"1em", border:"2px solid black", backgroundColor:"transparent"}}><Link to='/investments'style={{textDecoration:"none",color:"white"}}>Start Investing</Link></button></span>
                     </div>
                   </div>
                 </Col>

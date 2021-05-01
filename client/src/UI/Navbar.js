@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Savings from '../components/Savings/Savings';
+//import Savings from '../components/Savings/Savings';
 const NavbarComp=()=>{
     return (
 			<div className='navbar'>

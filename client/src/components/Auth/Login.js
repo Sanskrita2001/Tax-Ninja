@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import AuthContext from '../../Context/auth/authContext';
-
+//import Bunny from '../../images/Peace Bunny.svg';
 const LoginPage = (props) => {
   const authContext = useContext(AuthContext);
 
@@ -36,14 +36,11 @@ const LoginPage = (props) => {
 
   return (
     <div className='login'>
-      <h1
-        className='login-head'
-        style={{ fontFamily: 'Lucida Sans', color: '#4cbc8d' }}
-      >
+      
+      <h1 className='login-head' style={{ marginTop:"3em",textAlign:"center",color: '#4cbc8d' }}>
         Login Here
       </h1>
-      <div
-        className='login-form'
+      <div className='login-form'
         style={{
           width: '40%',
           textAlign: 'left',
@@ -52,6 +49,7 @@ const LoginPage = (props) => {
           border: '1px solid #4cbc8d',
         }}
       >
+        
         <Form onSubmit={onSubmit}>
           <Form.Group controlId='formBasic'>
             <Form.Label>Email address</Form.Label>
@@ -78,8 +76,8 @@ const LoginPage = (props) => {
             Submit
           </Button>
         </Form>
-      </div>
-    </div>
+        </div>
+        </div>    
   );
 };
 
