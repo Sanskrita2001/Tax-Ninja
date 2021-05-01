@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Bunny from '../images/bunny.png';
 const Landing=()=>{
     return(
@@ -15,8 +16,8 @@ const Landing=()=>{
                     <p className="l-text2" style={{ fontSize:"2.2em"}}>Your Final Stop For Tax Consulting</p>
                     </div>
                     <div style={{margin:"3em 0"}}>
-                      <span><button style={{width:"15em", fontSize:"1.2em", height:"3em", borderRadius:"1em", border:"2px solid black", backgroundColor:"black"}}><a href="#" style={{textDecoration:"none",color:"white"}}>GET STARTED</a></button></span>
-                      <span><button style={{width:"15em", fontSize:"1.2em", height:"3em", borderRadius:"1em", marginLeft:"2em", border:"2px solid black", backgroundColor:"black"}}><a href="#" style={{textDecoration:"none",color:"white"}}>ABOUT US</a></button></span>
+                      <span><button style={{width:"15em", fontSize:"1.2em", height:"3em", borderRadius:"1em", border:"2px solid black", backgroundColor:"black"}}><Link to='/savings'style={{textDecoration:"none",color:"white"}}>GET STARTED</Link></button></span>
+                      <span><button style={{width:"15em", fontSize:"1.2em", height:"3em", borderRadius:"1em", marginLeft:"2em", border:"2px solid black", backgroundColor:"black"}}><Link to='/savings'style={{textDecoration:"none",color:"white"}}>ABOUT US</Link></button></span>
                     </div>
                   </div>
                 </Col>
