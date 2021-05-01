@@ -12,17 +12,19 @@ const NavbarComp=()=>{
 					variant='dark'
 					fixed='top'
 				>
-					<Navbar.Brand href='#home'>Tax-Ninja</Navbar.Brand>
+					<Navbar.Brand href='#home'>TaxNinja</Navbar.Brand>
 					<Navbar.Toggle aria-controls='responsive-navbar-nav' />
 					<Navbar.Collapse id='responsive-navbar-nav'>
+						<div style={{marginRight:"2em"}}>
 						<Nav>
 							<Nav.Link>
-                            <Link to='/savings'>Savings</Link>
+                            <Link to='/savings' style={{textDecoration:"none"}}>Savings</Link>
 							</Nav.Link>
 							<Nav.Link href='#'>Investments</Nav.Link>
 							<Nav.Link href='#'>Profile</Nav.Link>
 							<Nav.Link href='#'>Logout</Nav.Link>
 						</Nav>
+						</div>
 					</Navbar.Collapse>
 				</Navbar>
 			</div>
