@@ -10,8 +10,13 @@ import {
 const Savings = () => {
 	const [show, setShow] = useState(false);
 
+    const [salary, setSalary] = useState(0);
+    const [rfi, setRfi] = useState(0);
+
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
+
+	const onChange = (e) => setSalary(e.target.value);
 	return (
 		<div className='savings'>
 			<div className='container'>
@@ -19,7 +24,16 @@ const Savings = () => {
 					<div className='col-12 col-md-6'>
 						<h1 style={{ marginTop: '30%', color: '#093321' }}>Start Saving</h1>
 						<Form.Group controlId='salary'>
-							<Form.Control type='text' placeholder='Gross Annual Salary' />
+							<Form.Label style={{ color: '#2D8D64' }}>
+								Gross Annual Salary
+							</Form.Label>
+							<Form.Control
+								type='text'
+								placeholder='Gross Annual Salary'
+								value={salary}
+								name={salary}
+								onChange={onChange}
+							/>
 							<Form.Text className='text-muted' style={{ color: '#2D8D64' }}>
 								We'll never share your details with anyone else.
 							</Form.Text>
@@ -266,7 +280,7 @@ const Savings = () => {
 						<h5 className='text-white p-3'>Total Deduction:</h5>
 						<h5 className='text-white p-3'>Taxable Income:</h5>
 						<h5 className='text-white p-3'>Your Savings:</h5>
-                        <h5 className='text-white p-3'>Your Taxes:</h5>
+						<h5 className='text-white p-3'>Your Taxes:</h5>
 						<Button variant='dark' size='lg' block style={{ margin: '5% 0' }}>
 							Save the Scenario
 						</Button>

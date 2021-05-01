@@ -17,9 +17,11 @@ const NavbarComp=()=>{
 					<Navbar.Collapse id='responsive-navbar-nav'>
 						<Nav>
 							<Nav.Link>
-                            <Link to='/savings'>Savings</Link>
+								<Link to='/savings'>Savings</Link>
 							</Nav.Link>
-							<Nav.Link href='#'>Investments</Nav.Link>
+							<Nav.Link>
+								<Link to='/investments'>Investments</Link>
+							</Nav.Link>
 							<Nav.Link href='#'>Profile</Nav.Link>
 							<Nav.Link href='#'>Logout</Nav.Link>
 						</Nav>
