@@ -1,31 +1,59 @@
 import React from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
-
+import {Form, Button, Col, Row} from 'react-bootstrap';
 function SignupPage (){
 return (
-<MDBContainer>
-  <MDBRow>
-    <MDBCol md="6">
-      <form>
-        <p className="h5 text-center mb-4">Sign up</p>
-        <div className="grey-text">
-          <MDBInput label="Your name" icon="user" group type="text" validate error="wrong"
-            success="right" />
-          <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong"
-            success="right" />
-          <MDBInput label="Your role" icon="exclamation-triangle" group type="text" validate
-            error="wrong" success="right" />
-          <input type="radio" name="role" value="Business">Business</input>
-          <input type="radio" name="role" value="Business">Service</input>
-          <MDBInput label="Your password" icon="lock" group type="password" validate />
-        </div>
-        <div className="text-center">
-          <MDBBtn color="primary">Register</MDBBtn>
-        </div>
-      </form>
-    </MDBCol>
-  </MDBRow>
-</MDBContainer>
+  <div className="signup">
+  <h1 className="Signup-head" style={{fontFamily:"Lucida Sans", color:"#4cbc8d"}}>Signup Here</h1>
+ <div className="signup-form" style={{width:"40%", textAlign:"left", marginLeft:"25em", padding:"2em", border:"1px solid #4cbc8d"}}>
+  
+   <Form>
+   <Form.Group as={Row} controlId="formHorizontalName">
+    <Form.Label column sm={2}>
+      Name
+    </Form.Label>
+    <Col sm={10}>
+      <Form.Control type="text" placeholder="Enter name" />
+    </Col>
+  </Form.Group>
+   <Form.Group as={Row} controlId="formHorizontalEmail">
+    <Form.Label column sm={2}>
+      Email
+    </Form.Label>
+    <Col sm={10}>
+      <Form.Control type="email" placeholder="Enter email" />
+    </Col>
+  </Form.Group>
+
+  <Form.Group as={Row} controlId="formHorizontalPassword">
+    <Form.Label column sm={2}>
+      Password
+    </Form.Label>
+    <Col sm={10}>
+      <Form.Control type="password" placeholder="Enter password" />
+    </Col>
+  </Form.Group>
+  <fieldset>
+    <Form.Group as={Row}>
+      <Form.Label as="legend" column sm={2}>
+        Role
+      </Form.Label>
+      <Col sm={10}>
+        <Form.Check type="radio" label="service" name="formHorizontalRadios"id="formHorizontalRadios1"
+        />
+        <Form.Check type="radio" label="business" name="formHorizontalRadios" id="formHorizontalRadios2"
+        />
+      </Col>
+    </Form.Group>
+  </fieldset>
+
+  <Form.Group as={Row}>
+    <Col sm={{ span: 10, offset: 2 }}>
+      <Button type="submit">Sign in</Button>
+    </Col>
+  </Form.Group>
+</Form>
+ </div>  
+ </div>    
 );
 }
 
