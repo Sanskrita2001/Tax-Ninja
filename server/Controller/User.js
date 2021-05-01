@@ -3,7 +3,7 @@ const asyncHandler = require('express-async-handler');
 const generateToken = require('../utils/generateTokens');
 
 exports.authUser = asyncHandler(async(req, res)=>{
-    const {name, email, role, password} = req.body;
+    const {email, password} = req.body;
 
     const user = await User.findOne({email});
 
@@ -19,20 +19,20 @@ exports.authUser = asyncHandler(async(req, res)=>{
         res.status(401)
         throw new Error('Invalid email or password')
     }
-    await Auth.create({
-        name,
-        email,
-        password,
-        role
-    })
+    // await Auth.create({
+    //     name,
+    //     email,
+    //     password,
+    //     role
+    // })
 
-    res.send({
-        name,
-        email,
-        password,
-        role,
-        token: generateToken(user._id)
-    })
+    // res.send({
+    //     name,
+    //     email,
+    //     password,
+    //     role,
+    //     token: generateToken(user._id)
+    // })
 })
 
 exports.registerUser = asyncHandler(async(req, res) => {
