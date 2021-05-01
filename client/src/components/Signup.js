@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 
-const SignupPage = () => {
-
+function SignupPage (){
 return (
 <MDBContainer>
   <MDBRow>
@@ -28,6 +27,6 @@ return (
   </MDBRow>
 </MDBContainer>
 );
-};
+}
 
 export default SignupPage;

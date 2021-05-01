@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from 'mdbreact';
 
-const LoginPage = () => {
+function LoginPage(){
 return (
 <MDBContainer>
   <MDBRow>
@@ -21,6 +21,6 @@ return (
   </MDBRow>
 </MDBContainer>
 );
-};
+}
 
 export default LoginPage;
