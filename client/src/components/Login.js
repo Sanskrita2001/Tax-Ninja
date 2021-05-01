@@ -24,7 +24,7 @@ return (
 	<div className='login'>
 		<h1
 			className='login-head'
-			style={{ fontFamily: 'Lucida Sans', color: '#4cbc8d' }}
+			style={{ fontFamily: 'Lucida Sans', color: '#4cbc8d', fontSize:"8em" }}
 		>
 			Login Here
 		</h1>
@@ -45,7 +45,7 @@ return (
 						type='email'
 						placeholder='Enter email'
 						value={email}
-						onChange={onChange}
+						onChange={onChange} style={{display:"block", width:"100%"}}
 					/>
 				</Form.Group>
 
@@ -55,7 +55,7 @@ return (
 						type='password'
 						placeholder='Password'
 						value={password}
-						onChange={onChange}
+						onChange={onChange} style={{display:"block", width:"100%"}}
 					/>
 				</Form.Group>
 				{/* <Form.Group controlId='formBasicCheckbox'>
