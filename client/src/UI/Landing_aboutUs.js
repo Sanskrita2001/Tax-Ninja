@@ -8,10 +8,10 @@ const LandingAbout=()=>{
        display:"block",width:"100%", backgroundColor:"#4CBC8D"}}>
           <Container fluid="md">
               <Row>
-                <Col><img src={Bunny} alt="bunny" style={{width:"20em"}}/>
+                <Col><img src={Bunny} alt="bunny" style={{width:"15em"}}/>
                 </Col>
                 <Col xs={8}>
-                  <div className="landing-text">
+                  <div className="landing-text" style={{marginBottom:"2em"}}>
                     <div>
                     <p className="l-text1" style={{fontSize:"4em",color:"white"}}>About Us</p>
                     <p className="l-text1" style={{fontSize:"2.8em"}}>Budget For Your Savings</p>

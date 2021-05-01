@@ -8,12 +8,12 @@ const LandingSaving=()=>{
        display:"block",width:"100%", backgroundColor:"#4CBC8D"}}>
           <Container fluid="md">
               <Row>
-                <Col><img src={Bunny} alt="bunny" style={{width:"20em"}}/>
+                <Col><img src={Bunny} alt="bunny" style={{width:"15em"}}/>
                 </Col>
                 <Col xs={8}>
                   <div className="landing-text">
                     <div>
-                    <p className="l-text1" style={{fontSize:"4em",color:"white"}}>Investments</p>
+                    <p className="l-text1" style={{fontSize:"4em",color:"white"}}>Savings</p>
                     <p className="l-text1" style={{fontSize:"2.8em"}}>Budget For Your Savings</p>
                     <p className="l-text2" style={{ fontSize:"2.8em"}}>Decide on Your Priorities</p>
                     <p className="l-text2" style={{ fontSize:"2.8em"}}>Watch Your Savings Grow!</p>

@@ -24,7 +24,7 @@ function App() {
           <Route className='Login' exact path='/' component={Login} />
           <Route className='signup' exact path='/signup' component={SignUp} />
           <Route exact path='/savings' component={Savings}></Route>
-          <Route exact path='/dummy' component={Dummy}></Route>
+          <Route exact path='/dummy' component={Helper}></Route>
         </Switch>
       </BrowserRouter>
     </AuthState>
