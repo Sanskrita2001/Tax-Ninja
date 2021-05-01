@@ -3,14 +3,13 @@ import {Form, Button} from 'react-bootstrap';
 
 function LoginPage(){
 return (
-<div className="login" style={{width:"40%", textAlign:"left", marginRight:"40px"}}>
+<div className="login">
+<h1 className="login-head" style={{fontFamily:"Lucida Sans", color:"#4cbc8d"}}>Login Here</h1>
+<div className="login-form" style={{width:"40%", textAlign:"left", marginLeft:"25em", padding:"2em", border:"1px solid #4cbc8d"}}>
 <Form>
   <Form.Group controlId="formBasic">
     <Form.Label>Email address</Form.Label>
     <Form.Control type="email" placeholder="Enter email" />
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>80
   </Form.Group>
 
   <Form.Group controlId="formBasicPassword">
@@ -24,6 +23,7 @@ return (
     Submit
   </Button>
 </Form>
+</div>
 </div>
 );
 }

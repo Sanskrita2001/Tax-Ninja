@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginPage from '../src/components/Login';
+import SignupPage from '../src/components/Signup';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       </header>
       <div className="Login">
           <LoginPage/>
+          <SignupPage/>
       </div>
     </div>
   );
