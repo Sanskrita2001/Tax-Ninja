@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import LoginPage from '../src/components/Login';
 import SignupPage from '../src/components/Signup';
-import './App.css';
+
 
 function App() {
   return (
