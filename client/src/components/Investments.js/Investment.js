@@ -1,14 +1,42 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
+import axios from "axios";
+import {Link} from "react-router-dom"
+import MutualFund from "./MutualFund";
+
 import {
 	Form,
 } from 'react-bootstrap';
 const Investment = () => {
+	// salary === rate
+	// netassetvalue = hra
+
+	const fetchData = async() => {
+		try {
+			if(salary !== 0 && hra !== 0){
+                const {data} = await axios.get(`http://localhost:5000/api/mutualfund?rate[$gt]=${salary}&netAssetValue=${hra}`)
+				setDatae(data)
+			} else if(salary !==0 && hra === 0){
+                const {data} = await axios.get(`http://localhost:5000/api/mutualfund?rate[$gt]=${salary}`)
+				setDatae(data)
+			} else if(salary ===0 && hra !== 0){
+				const {data} = await axios.get(`http://localhost:5000/api/mutualfund?netAssetValue=${hra}`)
+				setDatae(data)
+			}
+			
+		} catch (err) {
+			
+		}
+	}
+
+	useEffect(()=>{
+        fetchData();
+	}, [])
+	const [datae, setDatae] = useState([])
     const [salary, setSalary] = useState(0);
     const [hra, setHra] = useState(0);
-    const [lta, setLta] = useState(0);
     const handleChangeSalary = (e) => setSalary(e.target.value);
     const handleChangeHra = (e) => setHra(e.target.value);
-    const handleChangeLta = (e) => setLta(e.target.value);
+	console.log(salary)
     return (
 			<div className='container' style={{ marginTop: '5%' }}>
 				<h2>Please fill the fields applicable for you:</h2>
@@ -16,7 +44,7 @@ const Investment = () => {
 					<div className='col-12 col-md-6'>
 						<Form.Group controlId='salary'>
 							<Form.Label style={{ color: '#2D8D64' }}>
-								Gross Annual Salary
+								Enter the rate of interest you wanna risk.
 							</Form.Label>
 							<Form.Control
 								type='text'
@@ -28,7 +56,7 @@ const Investment = () => {
 						</Form.Group>
 						<Form.Group controlId='hra'>
 							<Form.Label style={{ color: '#2D8D64' }}>
-								House Rent Allowance(HRA)
+								enter the minimum value of the fund you wanna search for
 							</Form.Label>
 							<Form.Control
 								type='text'
@@ -38,20 +66,9 @@ const Investment = () => {
 								onChange={handleChangeHra}
 							/>
 						</Form.Group>
-						<Form.Group controlId='hra'>
-							<Form.Label style={{ color: '#2D8D64' }}>
-								House Rent Allowance(HRA)
-							</Form.Label>
-							<Form.Control
-								type='text'
-								placeholder='Leave Travel Allowance(LTA)'
-								value={lta}
-								name={lta}
-								onChange={handleChangeLta}
-							/>
-						</Form.Group>
 					</div>
 				</div>
+				<Link className="btn btn-success text-center" to='/mutualfunds' component={MutualFund}/>
 			</div>
 		);
 }

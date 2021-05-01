@@ -16,14 +16,12 @@ const NavbarComp=()=>{
 					<Navbar.Toggle aria-controls='responsive-navbar-nav' />
 					<Navbar.Collapse id='responsive-navbar-nav'>
 						<Nav>
-							<Nav.Link>
+						<Nav.Link>
 								<Link to='/savings'>Savings</Link>
 							</Nav.Link>
 							<Nav.Link>
 								<Link to='/investments'>Investments</Link>
 							</Nav.Link>
-							<Nav.Link href='#'>Profile</Nav.Link>
-							<Nav.Link href='#'>Logout</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>

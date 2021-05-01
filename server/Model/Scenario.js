@@ -1,29 +1,27 @@
 const mongoose = require('mongoose');
 
 const scenarioSchema = new mongoose.Schema({
-    salary:{
+    totalExemption: {
         type: Number,
-        required: [true, 'Please enter a salary']
+        required: true
     },
-    HRA:{
+    totalDeduction: {
         type: Number,
-        required: [true, 'Please enter a HRA']
+        required: true
     },
-    LTA:{
+    taxableIncome: {
         type: Number,
+        required: true
     },
-    gratuity:{
+    savings: {
         type: Number,
+        required: true
     },
-    foodCouponAllowance:{
+    totalTaxes: {
         type: Number,
-    },
-    leasedCarCompany:{
-        type: Number,
-    },
-    telephoneExpenses: {
-        type: Number
+        required: true
     }
+ 
 })
 
 module.exports = new mongoose.model('Scenario', scenarioSchema);
